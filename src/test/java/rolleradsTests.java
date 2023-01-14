@@ -75,6 +75,32 @@ public class rolleradsTests extends TestBase{
         $("#categories-2").shouldHave(text("Latest trends"));
     });
 }
+    @DisplayName("Отображение всех текстов во вкладках OnClick,In-page push,Push")
+    @Test
+    void aboutTabContentTest(){
+    step("Открыть главную страницу Rollerads", () -> {
+        open("https://rollerads.com/");
+        executeJavaScript("$('.cookie').remove()");
+    });
+    step("Перейти во вкладку OnClick", () -> {
+        $("#about_tab_2").hover().click();
+    });
+    step("Првоерить, что текст вкладки OnClick отобразился", () -> {
+        $(byTagAndText("h3", "What’s OnClick?")).shouldHave(text("What’s OnClick?"));
+    });
+    step("Перейти во вкладку In-page push", () -> {
+        $("#about_tab_3").hover().click();
+    });
+    step("Првоерить, что текст вкладки In-page push отобразился", () -> {
+        $(byTagAndText("h3", "What are In-Page Push notifications?")).shouldHave(text("What are In-Page Push notifications? "));
+    });
+    step("Перейти во вкладку Push", () -> {
+        $("#about_tab_1").hover().click();
+    });
+    step("Првоерить, что текст вкладки Push отобразился", () -> {
+        $(byTagAndText("h3", "What are Push Notifications?")).shouldHave(text("What are Push Notifications?"));
+    });
+}
     @DisplayName("Отображение всех имен и фамилий в разделе Contact")
     @Test
     void contactListTest(){
