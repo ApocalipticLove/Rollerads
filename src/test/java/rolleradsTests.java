@@ -51,8 +51,12 @@ public class rolleradsTests extends TestBase{
             "Webmoney"})
     @ParameterizedTest(name = "Проверка наличия названия платежной системы {0} в разделе Payment options")
     void paymentOptionsTest(String button) {
+    step("Открыть главную страницу Rollerads", () -> {
         open("https://rollerads.com/");
+    });
+    step("Проверка отображения названия платежной системы", () -> {
         $(".card-brands").shouldHave(text(button));
+    });
 }
     @DisplayName("Отображение всех категорий в разделе Blog")
     @Test
