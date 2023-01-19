@@ -75,7 +75,7 @@ public class rolleradsTests extends TestBase{
         $("#categories-2").shouldHave(text("Latest trends"));
     });
 }
-    @DisplayName("Отображение всех текстов во вкладках OnClick,In-page push,Push")
+    @DisplayName("Отображение всех текстов в каруселе OnClick,In-page push,Push")
     @Test
     void aboutTabContentTest(){
     step("Открыть главную страницу Rollerads", () -> {
