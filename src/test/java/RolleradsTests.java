@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-public class rolleradsTests extends TestBase{
+public class RolleradsTests extends TestBase{
     @DisplayName("Отображение всех benefits")
     @Test
     void benefitListTest(){
@@ -17,11 +17,11 @@ public class rolleradsTests extends TestBase{
         open("https://rollerads.com/");
     });
     step("Првоерить, что все преимущества отображаются", () -> {
-        $(".benefits__list").shouldHave(text("Compared to other ad formats such as emails, banners and videos"));
-        $(".benefits__list").shouldHave(text("Millions of people all over the worlds engage with our ads daily"));
-        $(".benefits__list").shouldHave(text("Reach the best-converting audience with a variety of targeting options"));
-        $(".benefits__list").shouldHave(text("Be confident in every impression and click that you get"));
-        $(".benefits__list").shouldHave(text("The minimum bid is only $0,001!"));
+        $(".benefits__list").shouldHave(text("Compared to other ad formats such as emails, banners and videos"),
+        text("Millions of people all over the worlds engage with our ads daily"),
+        text("Reach the best-converting audience with a variety of targeting options"),
+        text("Be confident in every impression and click that you get"),
+        text("The minimum bid is only $0,001!"));
     });
 }
     @DisplayName("Отображение всех вакансий в разделе Careers")
@@ -68,11 +68,11 @@ public class rolleradsTests extends TestBase{
         $(byText("Blog")).click();
     });
     step("Првоерить, что все категории отображаются", () -> {
-        $("#categories-2").shouldHave(text("About Push Notification Ads"));
-        $("#categories-2").shouldHave(text("Events"));
-        $("#categories-2").shouldHave(text("For Advertisers"));
-        $("#categories-2").shouldHave(text("For Publishers"));
-        $("#categories-2").shouldHave(text("Latest trends"));
+        $("#categories-2").shouldHave(text("About Push Notification Ads"),
+        text("Events"),
+        text("For Advertisers"),
+        text("For Publishers"),
+        text("Latest trends"));
     });
 }
     @DisplayName("Отображение всех текстов в каруселе OnClick,In-page push,Push")
