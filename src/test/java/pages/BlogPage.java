@@ -14,10 +14,17 @@ public class BlogPage {
     public static final String CAT_ITEM_3 = "For Advertisers";
     public static final String CAT_ITEM_4 = "For Publishers";
     public static final String CAT_ITEM_5 = "Latest trends";
+    public static final String SEARCH_TEXT = "Instagram";
+    public static final String POST_TITLE = "Affiliate Marketing on Instagram";
 
     private SelenideElement
             BlogTitle = $(byText("Blog")),
-            CategoriesWidgetTitle = $("#categories-2");
+            CategoriesWidgetTitle = $("#categories-2"),
+            SearchInput = $("input[placeholder='Search …']"),
+            SearchButton = $(".search-submit"),
+            SearchResults = $("#post-837");
+
+
 
     public BlogPage openBlog(){
         open("https://rollerads.com/");
@@ -33,4 +40,16 @@ public class BlogPage {
                 text(CAT_ITEM_5));
         return this;
     }
+
+    public BlogPage searchPost(){
+        SearchInput.setValue(SEARCH_TEXT);
+        SearchButton.click();
+        return this;
+    }
+
+    public BlogPage checkSearchResults(){
+        SearchResults.shouldHave(text(POST_TITLE));
+        return this;
+    }
+
 }
