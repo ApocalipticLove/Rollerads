@@ -18,22 +18,25 @@ public class BlogPage {
     public static final String POST_TITLE = "Affiliate Marketing on Instagram";
 
     private SelenideElement
-            BlogTitle = $(byText("Blog")),
-            CategoriesWidgetTitle = $("#categories-2"),
-            SearchInput = $("input[placeholder='Search …']"),
-            SearchButton = $(".search-submit"),
-            SearchResults = $("#post-837");
+            blogTitle = $(byText("Blog")),
+            categoriesWidgetTitle = $("#categories-2"),
+            searchInput = $("input[placeholder='Search …']"),
+            searchButton = $(".search-submit"),
+            searchResults = $("#post-837"),
+            firstNameInput = $("input[name='FNAME']"),
+            userEmailInput = $("input[name='EMAIL']"),
+            submitButton = $("input[name='EMAIL']");
 
 
 
     public BlogPage openBlog(){
         open("https://rollerads.com/");
-        BlogTitle.click();
+        blogTitle.click();
         return this;
     }
 
     public BlogPage checkCategoriesText(){
-        CategoriesWidgetTitle.shouldHave(text(CAT_ITEM_1),
+        categoriesWidgetTitle.shouldHave(text(CAT_ITEM_1),
                 text(CAT_ITEM_2),
                 text(CAT_ITEM_3),
                 text(CAT_ITEM_4),
@@ -42,14 +45,27 @@ public class BlogPage {
     }
 
     public BlogPage searchPost(){
-        SearchInput.setValue(SEARCH_TEXT);
-        SearchButton.click();
+        searchInput.setValue(SEARCH_TEXT);
+        searchButton.click();
         return this;
     }
 
     public BlogPage checkSearchResults(){
-        SearchResults.shouldHave(text(POST_TITLE));
+        searchResults.shouldHave(text(POST_TITLE));
+        return this;
+    }
+    public BlogPage setFirstName(String value) {
+        firstNameInput.setValue(value);
         return this;
     }
 
+    public BlogPage setEmail(String value) {
+        userEmailInput.setValue(value);
+        return this;
+    }
+
+    public BlogPage getSubmit() {
+        submitButton.click();
+        return this;
+    }
 }

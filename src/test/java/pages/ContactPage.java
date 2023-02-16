@@ -15,20 +15,20 @@ public class ContactPage {
     public static final String PROFILE_NAME_3 = "Alexander Akkaev";
 
     private SelenideElement
-    ContactTitle = $(byText("Contact")),
-    Profile1 = $(byTagAndText("h3", "Andrey Veselov")),
-    Profile2 = $(byTagAndText("h3", "Eugene Bezrodnyy")),
-    Profile3 = $(byTagAndText("h3", "Alexander Akkaev"));
+    contactTitle = $(byText("Contact")),
+    profile1 = $(byTagAndText("h3", "Andrey Veselov")),
+    profile2 = $(byTagAndText("h3", "Eugene Bezrodnyy")),
+    profile3 = $(byTagAndText("h3", "Alexander Akkaev"));
 
     public ContactPage openContact(){
         open("https://rollerads.com/");
-        ContactTitle.click();
+        contactTitle.click();
         return this;
     }
     public ContactPage checkTeamList(){
-        Profile1.shouldHave(text(PROFILE_NAME_1));
-        Profile2.shouldHave(text(PROFILE_NAME_2));
-        Profile3.shouldHave(text(PROFILE_NAME_3));
+        profile1.shouldHave(text(PROFILE_NAME_1));
+        profile2.shouldHave(text(PROFILE_NAME_2));
+        profile3.shouldHave(text(PROFILE_NAME_3));
         return this;
     }
 }

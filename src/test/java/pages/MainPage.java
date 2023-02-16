@@ -19,14 +19,14 @@ public class MainPage {
     public static final String IN_PAGE_PUSH_TITLE = "What are In-Page Push notifications?";
 
     private SelenideElement
-            BenefitsList = $(".benefits__list"),
-            AboutTab2 = $("#about_tab_2"),
-            OnClickTab = $(byTagAndText("h3", "What’s OnClick?")),
-            AboutTab3 = $("#about_tab_3"),
-            InPagePushTab = $(byTagAndText("h3", "What are In-Page Push notifications?")),
-            AboutTab1 = $("#about_tab_1"),
-            PushTab =  $(byTagAndText("h3", "What are Push Notifications?")),
-            CardBrands = $(".card-brands");
+            benefitsList = $(".benefits__list"),
+            aboutTab2 = $("#about_tab_2"),
+            onClickTab = $(byTagAndText("h3", "What’s OnClick?")),
+            aboutTab3 = $("#about_tab_3"),
+            inPagePushTab = $(byTagAndText("h3", "What are In-Page Push notifications?")),
+            aboutTab1 = $("#about_tab_1"),
+            pushTab =  $(byTagAndText("h3", "What are Push Notifications?")),
+            cardBrands = $(".card-brands");
 
 
 
@@ -37,7 +37,7 @@ public class MainPage {
     }
 
     public MainPage checkBenefitsListText() {
-        BenefitsList.shouldHave(text(HIGH_CTR_TITLE),
+        benefitsList.shouldHave(text(HIGH_CTR_TITLE),
                                 text(GLOBAL_REACH_TITLE),
                                 text(ANTIFRAUD_SYSTEM_TITLE),
                                 text(SMART_TARGETING_TITLE),
@@ -47,25 +47,25 @@ public class MainPage {
     }
 
     public MainPage checkOnClickTabText() {
-        AboutTab2.hover().click();
-        OnClickTab.shouldHave(text(ON_CLICK_TITLE));
+        aboutTab2.hover().click();
+        onClickTab.shouldHave(text(ON_CLICK_TITLE));
         return this;
     }
 
     public MainPage checkOnPagePushTabText(){
-        AboutTab3.hover().click();
-        InPagePushTab.shouldHave(text(IN_PAGE_PUSH_TITLE));
+        aboutTab3.hover().click();
+        inPagePushTab.shouldHave(text(IN_PAGE_PUSH_TITLE));
         return this;
     }
 
     public MainPage checkPushTabText() {
-        AboutTab1.hover().click();
-        PushTab.shouldHave(text(PUSH_TITLE));
+        aboutTab1.hover().click();
+        pushTab.shouldHave(text(PUSH_TITLE));
         return this;
     }
 
     public MainPage checkPaymentSystems(String button) {
-        CardBrands.shouldHave(text(button));
+        cardBrands.shouldHave(text(button));
         return this;
     }
 }
