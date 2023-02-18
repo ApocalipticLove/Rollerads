@@ -23,8 +23,6 @@ public class BlogPage {
             submitButton = $("input[name='EMAIL']"),
             subscribeResponse = $(".mc4wp-response");
 
-
-
     public BlogPage openBlog(){
         open("https://rollerads.com/");
         blogTitle.click();

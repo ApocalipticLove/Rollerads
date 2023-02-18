@@ -28,8 +28,6 @@ public class MainPage {
             pushTab =  $(byTagAndText("h3", "What are Push Notifications?")),
             cardBrands = $(".card-brands");
 
-
-
     public MainPage openPage() {
         open("https://rollerads.com/");
         executeJavaScript("$('.cookie').remove()");
