@@ -47,8 +47,5 @@ public class BlogPageSearchAndSubscribeTests extends TestBase {
         step("Отправка формы", () -> {
             blogPage.getSubmit();
         });
-//        step("Отправка формы", () -> {
-//            blogPage.checkSubscribeResult();
-//        });
     }
 }

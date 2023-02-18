@@ -20,8 +20,7 @@ public class BlogPage {
             searchResults = $("#post-837"),
             firstNameInput = $("input[name='FNAME']"),
             userEmailInput = $("input[name='EMAIL']"),
-            submitButton = $("input[name='EMAIL']"),
-            subscribeResponse = $(".mc4wp-response");
+            submitButton = $("input[name='EMAIL']");
 
     public BlogPage openBlog(){
         open("https://rollerads.com/");
@@ -51,10 +50,6 @@ public class BlogPage {
 
     public BlogPage getSubmit() {
         submitButton.click();
-        return this;
-    }
-    public BlogPage checkSubscribeResult() {
-        subscribeResponse.shouldHave(text(SUBSCRIBE_RESPONSE_TEXT));
         return this;
     }
 }
