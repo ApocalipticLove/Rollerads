@@ -5,28 +5,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.BlogPage;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class BlogPageContentTests extends TestBase {
+public class BlogPageSearchAndSubscribeTests extends TestBase {
 
     BlogPage blogPage = new BlogPage();
-
     Faker faker = new Faker();
-
-    @DisplayName("Отображение всех категорий в разделе Blog")
-    @Test
-    void blogCategoriesTest(){
-        step("Открыть главную страницу Rollerads и перейти во вкладку Blog", () -> {
-            blogPage.openBlog();
-        });
-        step("Првоерить, что все категории отображаются", () -> {
-            blogPage.checkCategoriesText();
-        });
-    }
 
     @DisplayName("Поиск поста в блоге по ключевому слову")
     @Test
@@ -60,6 +46,9 @@ public class BlogPageContentTests extends TestBase {
         });
         step("Отправка формы", () -> {
             blogPage.getSubmit();
+        });
+        step("Отправка формы", () -> {
+            blogPage.checkSubscribeResult();
         });
     }
 }
