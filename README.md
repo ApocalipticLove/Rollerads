@@ -12,6 +12,8 @@
 >
 > ➠ [Отчет о результатах тестирования в Allure Report](#-главная-страница-allure-отчета)
 >
+> ➠ [Интеграция с Allure TestOps](#-интеграция-с-allure-testops)
+> 
 > ➠ [Уведомления в Telegram с использованием бота](#-уведомления-в-telegram-с-использованием-бота)
 >
 > ➠ [Пример запуска теста в Selenoid](#-пример-запуска-теста-в-selenoid)
@@ -34,6 +36,7 @@
 <img width="6%" title="Selenide" src="readme_attach/design/Selenide.svg">
 <img width="6%" title="Selenoid" src="readme_attach/design/Selenoid.svg">
 <img width="6%" title="Allure Report" src="readme_attach/design/Allure_Report.svg">
+<img width="6%" title="Allure Report" src="readme_attach/design/Allure_TO.svg">
 <img width="6%" title="Gradle" src="readme_attach/design/Gradle.svg">
 <img width="6%" title="JUnit5" src="readme_attach/design/JUnit5.svg">
 <img width="6%" title="GitHub" src="readme_attach/design/GitHub.svg">
@@ -83,13 +86,13 @@ gradle clean test
 <img title="Jenkins" src="readme_attach/settings.png">
 </p>
 
-## <img width="4%" title="Allure_Report" src="readme_attach/Allure_Report.svg"> Главная страница allure отчета
+## <img width="4%" title="Allure_Report" src="readme_attach/Allure_Report.svg"> Главная страница Allure отчета
 
 <p align="center">
 <img title="Allure_main" src="readme_attach/allure.png">
 </p>
 
-### <img width="4%" title="Allure_Report" src="readme_attach/Allure_Report.svg"> Тест кейсы в отчете allure
+### <img width="4%" title="Allure_Report" src="readme_attach/Allure_Report.svg"> Список тестов в отчете Allure
 
 <p align="center">
 <img title="Allure_suits" src="readme_attach/allure_suits.png">
@@ -99,6 +102,26 @@ gradle clean test
 
 <p align="center">
 <img title="Allure_dashboard" src="readme_attach/Graphs.png">
+</p>
+
+## <img width="4%" title="Allure TestOPS" src="readme_attach/Allure_TO.svg"> Интеграция с Allure TestOps
+
+### Основная страница с графиками
+
+<p align="center">
+  <img src="readme_attach/allure-testops-dashboards.png" alt="dashboard" width="900">
+</p>
+
+### Список тестов с результатами
+
+<p align="center">
+  <img src="readme_attach/allure-testops-results.png" alt="dashboard" width="900">
+</p>
+
+### Тест-кейсы
+
+<p align="center">
+  <img src="readme_attach/allure-testops-testcases.png" alt="testcase" width="900">
 </p>
 
 ## <img width="4%" title="Telegram" src="readme_attach/Telegram.svg"> Уведомления в Telegram с использованием бота
