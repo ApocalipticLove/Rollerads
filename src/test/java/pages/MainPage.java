@@ -12,13 +12,6 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
 
-//    public static final String HIGH_CTR_TITLE = "Compared to other ad formats such as emails, banners and videos";
-//    public static final String GLOBAL_REACH_TITLE = "Millions of people all over the worlds engage with our ads daily";
-//    public static final String ANTIFRAUD_SYSTEM_TITLE = "Fraudsters and bots won’t stand a chance to chip off from your payout";
-//    public static final String SMART_TARGETING_TITLE = "Reach the best-converting audience with a variety of targeting options";
-//    public static final String REAL_TRAFFIC_TITLE = "Be confident in every impression and click that you get";
-//    public static final String LOW_COST_TITLE = "The minimum bid is only $0,001!";
-
     private ElementsCollection benefitsList = $$(".benefits__item");
     private SelenideElement aboutTab2 = $("#about_tab_2");
     private SelenideElement onClickTab = $(byTagAndText("h3", "What’s OnClick?"));
