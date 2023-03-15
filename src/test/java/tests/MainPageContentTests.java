@@ -38,8 +38,8 @@ public class MainPageContentTests extends TestBase{
     void aboutTabContentTest(){
 
         String onClickTitle = "What’s OnClick?";
-        String inPagePushTitle = "What are Push Notifications?";
-        String pushTitle = "What are In-Page Push notifications?";
+        String inPagePushTitle = "What are In-Page Push notifications?";
+        String pushTitle = "What are Push Notifications?";
 
         step("Открыть главную страницу Rollerads", () -> {
             mainPage.openPage();
