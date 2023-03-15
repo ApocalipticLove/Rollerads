@@ -10,7 +10,6 @@ public class DriverSettings {
         Configuration.browserSize = Project.config.browserSize();
         Configuration.browser = Project.config.browser();
         Configuration.browserVersion = Project.config.browserVersion();
-
         Configuration.remote = Project.config.remoteUrl();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

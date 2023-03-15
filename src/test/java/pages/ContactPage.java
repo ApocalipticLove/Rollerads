@@ -15,14 +15,12 @@ public class ContactPage {
     public static final String PROFILE_NAME_3 = "Alexander Akkaev";
 
     private SelenideElement
-    contactTitle = $(byText("Contact")),
     profile1 = $(byTagAndText("h3", "Andrey Veselov")),
     profile2 = $(byTagAndText("h3", "Eugene Bezrodnyy")),
     profile3 = $(byTagAndText("h3", "Alexander Akkaev"));
 
     public ContactPage openContact(){
-        open("https://rollerads.com/");
-        contactTitle.click();
+        open("https://rollerads.com/contact.html");
         return this;
     }
     public ContactPage checkTeamList(){

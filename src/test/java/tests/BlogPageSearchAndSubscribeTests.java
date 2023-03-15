@@ -17,14 +17,19 @@ public class BlogPageSearchAndSubscribeTests extends TestBase {
     @DisplayName("Поиск поста в блоге по ключевому слову")
     @Test
     void blogCSearchTest(){
+
+        String searchText = "Instagram";
+        String searchTitle = "Affiliate Marketing on Instagram";
+
+
         step("Открыть главную страницу Rollerads и перейти во вкладку Blog", () -> {
             blogPage.openBlog();
         });
         step("Вводим значение в поле поиска", () -> {
-            blogPage.searchPost();
+            blogPage.searchPost(searchText);
         });
         step("Проверяем результат поиска", () -> {
-            blogPage.checkSearchResults();
+            blogPage.checkSearchResults(searchTitle);
         });
     }
 
@@ -45,7 +50,7 @@ public class BlogPageSearchAndSubscribeTests extends TestBase {
             blogPage.setEmail(userEmail);;
         });
         step("Отправка формы", () -> {
-            blogPage.getSubmit();
+            blogPage.clickSubmitButton();
         });
     }
 }
