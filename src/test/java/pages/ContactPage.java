@@ -33,7 +33,7 @@ public class ContactPage {
 //    }
 
     public ContactPage checkTeamList(List<String> expectedName){
-        $$("h3").shouldHave(CollectionCondition.texts(expectedName));
+        $$(".profile__name").shouldHave(CollectionCondition.texts(expectedName));
         return this;
     }
 }
